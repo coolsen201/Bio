@@ -1,0 +1,5 @@
+version1.html
+version2.html
+*.tmp
+.vscode/
+Thumbs.db

@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senthil Varadarajan | C-Suite Technology Executive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f2c59;
+            --secondary: #1d4599;
+            --accent: #2a5fcc;
+            --gold: #d4af37;
+            --light: #eef2f8;
+            --dark: #0a1a36;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+            --shadow: 0 15px 40px rgba(15, 44, 89, 0.12);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #EEFAC8;
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            border-bottom: 1px solid rgba(15, 44, 89, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .logo span::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 40px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary);
+            background: none;
+            border: none;
+        }
+        
+        /* Hero Section */
+.hero {
+    padding: 180px 0 100px; /* reduced from 220px 0 150px */
+    background: linear-gradient(135deg, #0f2c59 0%, #1d4599 50%, #2a5fcc 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -100%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: 58px;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-subtitle {
+            font-size: 26px;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            font-weight: 300;
+            border-left: 4px solid var(--gold);
+            padding-left: 20px;
+        }
+        
+        .hero-highlight {
+            color: var(--gold);
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--gold), #ffef9f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .profile-img {
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-img img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+        
+        .profile-img img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .executive-tag {
+            display: inline-block;
+            padding: 12px 25px;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 30px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            margin-top: 45px;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), #e6c12f);
+            color: var(--dark);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #e6c12f, var(--gold));
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-title h2 {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 20px;
+            max-width: 800px;
+            margin: 30px auto 0;
+            font-weight: 300;
+        }
+        
+        /* Executive Impact Section */
+        .executive-impact {
+            background-color: var(--white);
+            border-radius: 30px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--shadow);
+            padding: 60px;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .impact-card {
+            padding: 30px 25px;
+            background: linear-gradient(135deg, var(--light) 0%, #f0f5ff 100%);
+            border-radius: 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(15, 44, 89, 0.08);
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(15, 44, 89, 0.15);
+            background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+            border-color: rgba(42, 95, 204, 0.2);
+        }
+        
+        .impact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 28px;
+        }
+        
+        .impact-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .impact-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* About Me Section */
+        .about {
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2f8 100%);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 20px; /* Changed from 18px to 20px */
+            color: var(--text);
+        }
+        
+        .competencies {
+            margin-top: 40px;
+        }
+        
+        .competencies h4 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .competency-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .competency-list li {
+            padding: 15px 20px;
+            background: var(--white);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(15, 44, 89, 0.08);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .competency-list li i {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, var(--white), #f8faff);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(15, 44, 89, 0.08);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-text {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* Executive Experience - WIDER BOXES */
+        .experience-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            margin-bottom: 60px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .timeline-content {
+            padding: 45px;
+            background: var(--white);
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 1px solid rgba(15, 44, 89, 0.08);
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(15, 44, 89, 0.2);
+            border-color: rgba(42, 95, 204, 0.3);
+        }
+        
+        .timeline-content h3 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-company {
+            font-size: 20px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .timeline-highlight {
+            color: var(--gold);
+            font-weight: 700;
+            margin: 25px 0 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-highlight i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        .timeline-list {
+            list-style: none;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .timeline-list li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+			font-size: 20px; /* Added this line */
+        }
+        
+        .timeline-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .leadership-focus {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(42, 95, 204, 0.05));
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            border-left: 4px solid var(--gold);
+            grid-column: 1 / -1;
+        }
+        
+        .leadership-focus h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .leadership-focus h4 i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+  /* Certifications - SMALLER FOR SAME LINE */
+.certifications {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f8 100%);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Reduced from 260px to 180px */
+    gap: 15px; /* Reduced from 20px */
+}
+
+.cert-card {
+    background: var(--white);
+    border-radius: 15px; /* Reduced from 20px */
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(15, 44, 89, 0.08);
+    height: 100%;
+    transform: scale(0.65); /* Further reduced from 0.75 to 0.65 */
+    margin: 0 auto;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px) scale(0.65); /* Adjusted hover transform */
+    box-shadow: 0 15px 30px rgba(15, 44, 89, 0.15); /* Reduced shadow */
+}
+
+.cert-img {
+    height: 120px; /* Reduced from 150px */
+    overflow: hidden;
+}
+
+.cert-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from contain to cover for better fit */
+    transition: var(--transition);
+}
+
+.cert-card:hover .cert-img img {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    padding: 15px; /* Reduced from 25px */
+}
+
+.cert-info h3 {
+    font-size: 14px; /* Reduced from 18px */
+    margin-bottom: 8px; /* Reduced from 12px */
+    color: var(--primary);
+    line-height: 1.3; /* Reduced from 1.4 */
+    font-weight: 700;
+}
+
+.cert-info p {
+    font-size: 12px; /* Add font size for paragraph */
+    margin-bottom: 8px; /* Add margin */
+    color: var(--text-light);
+}
+
+.cert-badge {
+    display: inline-block;
+    padding: 4px 10px; /* Reduced from 6px 15px */
+    background: linear-gradient(90deg, var(--light), #e8efff);
+    color: var(--accent);
+    border-radius: 50px;
+    font-size: 11px; /* Reduced from 13px */
+    font-weight: 700;
+    border: 1px solid rgba(42, 95, 204, 0.2);
+}
+
+
+        
+        /* Visual Showcase Section */
+        .visual-showcase {
+            background: var(--white);
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .showcase-item {
+            background: linear-gradient(135deg, var(--light) 0%, #f0f5ff 100%);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(15, 44, 89, 0.08);
+            transition: var(--transition);
+        }
+        
+        .showcase-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(15, 44, 89, 0.15);
+        }
+        
+        .showcase-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #eef2f8, #dbe4f5);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 24px;
+            overflow: hidden;
+        }
+        
+        .showcase-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Social Media Gallery */
+.social-gallery {
+    margin-top: 0px;
+    padding-top: 0;
+}
+
+.visual-showcase:last-of-type {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+        
+.social-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+.social-photo {
+   aspect-ratio: 3/4; /* better for portrait images */
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition);
+}
+
+
+
+        .social-photo:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(15, 44, 89, 0.2);
+        }
+        
+.social-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	  object-position: center;
+	  background-color: #f0f5ff; /* adds background for letterboxing */
+    transition: var(--transition);
+}
+
+        
+        .social-photo:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Global Leadership */
+.global {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 80px 0; /* reduced from 120px */
+}
+        
+        .global .section-title h2 {
+            color: white;
+        }
+        
+        .global .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+.global-map {
+    position: relative;
+    height: 400px; /* reduced from 500px */
+    background: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 30px; /* reduced from 50px */
+}
+        
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 44, 89, 0.85) 0%, rgba(29, 69, 153, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px; /* reduced from 60px */
+}
+        
+        .map-content {
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        .map-content h3 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .map-flags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .flag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .flag-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Contact */
+        .contact {
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--light), #f0f5ff);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--accent);
+            border: 1px solid rgba(15, 44, 89, 0.1);
+        }
+        
+        .contact-details h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--light), #e8efff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 24px;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid rgba(15, 44, 89, 0.1);
+        }
+        
+        .social-link:hover {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: white;
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .copyright {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 15px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-img img {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 48px;
+            }
+            
+            .hero-subtitle {
+                font-size: 22px;
+            }
+            
+            .section-title h2 {
+                font-size: 40px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .competency-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                margin-top: 25px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 25px;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .executive-impact {
+                padding: 40px 25px;
+                margin-top: -40px;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-content h3 {
+                font-size: 32px;
+            }
+            
+            .social-photos {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .social-photo {
+                aspect-ratio: 3/4;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header style="padding: 25px 0px; box-shadow: rgba(15, 44, 89, 0.12) 0px 15px 40px;">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">SENTHIL<span>VARADARAJAN</span></a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Leadership Journey</a></li>
+                    <li><a href="#it-journey">IT Journey</a></li>
+                    <li><a href="#visual">Visual Showcase</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#global">Global Presence</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Architecting Digital <span class="hero-highlight">Transformation</span> at Enterprise Scale</h1>
+                    <div class="hero-subtitle">C-Suite Technology Executive | AI Governance Pioneer | Global Digital Strategy Leader</div>
+                    <div class="executive-tag">Former Head of IT - Bihar Government AI Research Centre | Fortune 500 Advisor</div>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                        <a href="#experience" class="btn btn-secondary"><i class="fas fa-chart-line"></i> View Experience</a>
+                    </div>
+                </div>
+                <div class="profile-img">
+                    <!-- Replace with your actual profile image -->
+                   <img src="assets/images/profile/profile.jpg" alt="Senthil Varadarajan - Executive Portrait">
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="section-subtitle">Strategic technology leader with a proven track record of delivering transformative results</div>
+				<div style="text-align: center; margin: 40px 0;">
+				<img src="assets/images/profile/profile1.jpg" alt="Senthil Varadarajan Profile" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 20px 40px rgba(15, 44, 89, 0.15);">
+</div>
+
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Driving Innovation &amp; Excellence in Global IT Leadership</h3>
+                    <p style="font-size: 20px;">I am an experienced and results-driven IT leader with 19+ years of success in driving large-scale digital transformations, managing complex IT operations, and delivering high-impact technology solutions across global enterprises.</p>
+                    <p style="font-size: 20px;">My expertise spans across cloud migrations, AI/ML implementations, ERP rollouts, DevOps automation, and cybersecurity frameworks. I bring a strategic blend of technical expertise, business acumen, and hands-on execution to both Project Manager and IT Head roles.</p>
+                    <p style="font-size: 20px;">Currently based in Barcelona, Spain, with extensive experience working across India, Europe, APAC, and the US markets.</p>
+                    
+                    <div class="competencies">
+                        <h4>Core Competencies</h4>
+                        <div style="margin: 25px 0 15px; padding-left: 10px; border-left: 4px solid var(--gold);">
+                            <h5 style="font-size: 20px; color: var(--primary); margin-bottom: 8px; font-weight: 700;">
+                                IT Journey Highlights
+                            </h5>
+                            <p style="font-size: 16px; color: var(--text-light); margin: 0;">
+                                Key areas of expertise developed over 19+ years
+                            </p>
+                        </div>
+                        <ul class="competency-list">
+                            <li><i class="fas fa-cloud"></i> Digital Transformation &amp; Cloud Strategy</li>
+                            <li><i class="fas fa-robot"></i> AI/ML Implementation &amp; Governance</li>
+                            <li><i class="fas fa-cogs"></i> IT Service Management (ITIL/ITSM)</li>
+                            <li><i class="fas fa-chart-line"></i> Cost Optimization &amp; FinOps Expertise</li>
+                            <li><i class="fas fa-users"></i> Global Team Leadership &amp; Mentoring</li>
+                            <li><i class="fas fa-shield-alt"></i> Cybersecurity &amp; Risk Management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="stats">
+                        <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                            <span class="stat-number">19+</span>
+                            <span class="stat-text">Years Experience</span>
+                        </div>
+                        <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">Major Projects</span>
+                        </div>
+                        <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-text">Team Size Managed</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 50px;">
+                        <h3 style="font-size: 28px; color: var(--primary); margin-bottom: 20px;">Global Leadership Philosophy</h3>
+                        <p style="margin-bottom: 20px; font-size: 20px;">My leadership approach combines strategic vision with operational excellence, focusing on building high-performing teams that deliver measurable business outcomes. I believe in empowering organizations through technology while maintaining rigorous governance and risk management.</p>
+                        <p style="font-size: 20px;">I have successfully navigated complex stakeholder ecosystems across government, Fortune 500, and startup environments, consistently delivering projects on time and within budget while exceeding quality expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Impact Section -->
+    <section id="impact" class="executive-impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quantified Executive Impact</h2>
+                <div class="section-subtitle">Delivering measurable enterprise value through strategic technology leadership</div>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="impact-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Financial Leadership</h3>
+                    <span class="impact-number">₹28Cr+</span>
+                    <p>Technology investment secured for sovereign AI initiatives with demonstrable ROI</p>
+                </div>
+                
+                <div class="impact-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="impact-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI/ML Governance</h3>
+                    <span class="impact-number">50+</span>
+                    <p>Government stakeholders served through AI Research Centre with LLama 3.1 70B deployment</p>
+                </div>
+                
+                <div class="impact-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3>Operational Transformation</h3>
+                    <span class="impact-number">35%</span>
+                    <p>Operational efficiency uplift through digital transformation initiatives</p>
+                </div>
+                
+                <div class="impact-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="impact-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Scale</h3>
+                    <span class="impact-number">500K+</span>
+                    <p>Daily transactions orchestrated through omnichannel commerce platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Experience Section - WIDER BOXES -->
+    <section id="experience" class="experience" style="padding-bottom: 30px;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Executive Leadership Journey</h2>
+                <div class="section-subtitle">Pioneering technology strategy for government entities and Fortune 500 enterprises</div>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <h3>Strategic Advisor &amp; Head of Information Technology</h3>
+                        <span class="timeline-company">CodeBucket | Bihar Government AI Research Centre Initiative</span>
+                        <div class="timeline-highlight"><i class="fas fa-crown"></i> Sovereign AI Infrastructure &amp; Digital Governance</div>
+                        <div class="leadership-focus">
+                            <h4><i class="fas fa-users"></i> Leadership Impact at CodeBucket</h4>
+                            <p>Directly reported to senior government officials including IAS officers, IPS officers, District Magistrates, and Chief Ministers. Led a team of 40+ engineers in 24/7 infrastructure operations and development. Served as the primary management consultant and trusted advisor for AI-driven governance initiatives.</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Architected and operationalized India's pioneering AI Research Centre, establishing sovereign data governance frameworks for 50+ government stakeholders</li>
+                            <li>Orchestrated horizontal and vertical scaling initiatives supporting 500+ concurrent users, synthesizing organizational transformation strategy yielding 35% operational efficiency improvement</li>
+                            <li>Secured ₹28 Crore technology investment authorization through executive stakeholder management and compelling business case articulation</li>
+                            <li>Pioneered AI/ML operations strategy deploying LLama 3.1 70B models and RAG pipelines, establishing foundational AI governance for policy analytics</li>
+                            <li>Led enterprise incident response achieving 78% improvement in recovery windows while maintaining critical citizen service continuity</li>
+                            <li>Directed release management, business continuity planning, and crisis operations with 99.9% SLA achievement across all services</li>
+                            <li>Managed OpEx budgets for AI/ML data center operations while delivering cost savings through strategic optimization</li>
+                            <li>Built planning platform for policymakers on AWS cloud with comprehensive risk assessment and mitigation frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <h3>Executive Technology Consultant | VP Technology Strategy</h3>
+                        <span class="timeline-company">Independent Engagements | Multinational Portfolio</span>
+                        <div class="timeline-highlight"><i class="fas fa-chess-queen"></i> Digital Transformation &amp; Cloud Modernization</div>
+                        <div class="leadership-focus">
+                            <h4><i class="fas fa-handshake"></i> Leadership Impact in Consulting</h4>
+                            <p>Provided C-level advisory to luxury cosmetics organizations, digital marketing agencies, and theme park operators. Served as the primary strategic advisor for IT transformations, reducing client dependency on full-time roles while optimizing IT budgets by 40%.</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Delivered comprehensive technology strategy for luxury cosmetics conglomerate, architecting omnichannel commerce platform supporting 500K+ daily transactions</li>
+                            <li>Engineered AI-driven theme park analytics ecosystem integrating Interactive AI and VR, delivering 40% operational efficiency through data-driven visitor insights</li>
+                            <li>Achieved 40% cloud cost optimization for AWS-centric SaaS delivery models while consolidating 12 legacy systems into unified cloud architecture</li>
+                            <li>Generated ₹50 lakh annualized savings through strategic infrastructure consolidation and FinOps implementation</li>
+                            <li>Provided C-suite advisory on cloud security, software licensing, and robust IT security frameworks for multinational clientele</li>
+                            <li>Developed IT policies and procedures for UK-based manpower consultancy to attain Cyber Essentials and Cyber Essentials Plus certifications</li>
+                            <li>Delivered serverless IT roadmaps using AWS for cosmetics product resellers with defined milestones and business objective alignment</li>
+                            <li>Managed AWS SaaS application services for Digital Marketing agencies on application platforms, websites, databases, and mobile apps</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <h3>Experienced Consultant | IT Crisis Operations</h3>
+                        <span class="timeline-company">Amaris Consulting | Nestlé &amp; Nespresso Brands</span>
+                        <div class="timeline-highlight"><i class="fas fa-shield-alt"></i> Major Incident Management &amp; Business Continuity</div>
+                        <div class="leadership-focus">
+                            <h4><i class="fas fa-fire-extinguisher"></i> Leadership Impact at Amaris Consulting</h4>
+                            <p>Served as the primary crisis management consultant for Nestlé and Nespresso across international markets. Led Major Incident Management teams during critical outages, presenting directly to Board of Directors for project approvals and strategic reviews.</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Orchestrated crisis operations and IT business disruption management across international markets for Fortune 500 FMCG leaders</li>
+                            <li>Created high-redundancy architectures with sub-30-minute RTO/RPO metrics during regional and global outages, preserving critical revenue streams</li>
+                            <li>Led Major Incident Management teams for P1/P2 incidents achieving 100% SLA compliance while minimizing business disruption during peak sales cycles</li>
+                            <li>Implemented standalone POS systems during critical outages, safeguarding multimillion-dollar sales revenue during festival periods</li>
+                            <li>Directed war room operations with cross-functional teams across APAC, EMEA, and US markets</li>
+                            <li>Conducted trend analysis using ServiceNow analytics to proactively detect recurring problems and enable preventive actions</li>
+                            <li>Managed stakeholder communication throughout problem lifecycle with clear updates on status, risks, and mitigation plans</li>
+                            <li>Developed and delivered regular problem management reports and dashboards for leadership tracking SLAs, resolution times, and service impact</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <h3>IT Manager | Manufacturing Operations</h3>
+                        <span class="timeline-company">Yazaki Wiring Technologies | India</span>
+                        <div class="timeline-highlight"><i class="fas fa-industry"></i> Manufacturing IT Infrastructure &amp; ERP Implementation</div>
+                        <div class="leadership-focus">
+                            <h4><i class="fas fa-user-tie"></i> Leadership Impact at Yazaki</h4>
+                            <p>Reported directly to CEO and CFO as IT Manager responsible for running three manufacturing production units with zero downtime 24/7. Managed IT operations with 10 engineers across three manufacturing units ensuring uninterrupted production for automotive giants including Ford, Nissan, and Daimler.</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Managed complete IT infrastructure for three manufacturing plants serving automotive giants with zero downtime operations</li>
+                            <li>Led ERP (QAD) implementation and application support, reducing IT communication costs by 50% through network redesign</li>
+                            <li>Maintained 100% IT audit compliance rate while securing plant's IT assets and aligning with industry security standards</li>
+                            <li>Engineered and implemented network topology redesign, routing strategies, and advanced firewall configurations</li>
+                            <li>Managed 100+ Windows servers and data center with full responsibility for CapEx IT budget planning and execution</li>
+                            <li>Established robust escalation framework with bridge calls during critical IT breakdowns and led high-priority RCA for major incidents</li>
+                            <li>Oversaw IT hardware, software, and license lifecycle management ensuring regulatory compliance and cost-efficiency</li>
+                            <li>Coordinated IT rollouts between Turkey and India while overseeing infrastructure implementation and security protocol compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <h3>Team Leader | Cloud &amp; Security Operations</h3>
+                        <span class="timeline-company">CSS Corp Pvt Ltd | Unilever &amp; Latitude Clients</span>
+                        <div class="timeline-highlight"><i class="fas fa-cloud"></i> Cloud Transformation &amp; Digital Marketing Services</div>
+                        <div class="leadership-focus">
+                            <h4><i class="fas fa-user-tie"></i> Leadership Impact at CSS Corp</h4>
+                            <p>Promoted from Engineer to Team Leader within 6 months. Led a 30-member Cloud &amp; SRE team ensuring 24/7 support coverage across 3,000+ servers. Served as Single Point of Contact for Unilever.com, managing IT Asset Management and IT Service Management services.</p>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Managed IT team of 18 operations, 4 developers, and 4 DB engineers for 24/7 global support operations</li>
+                            <li>Led and mentored team of 30 L2/L3 engineers on cloud operations, focusing on talent development and upskilling</li>
+                            <li>Reduced cloud costs by 30% through optimization strategies and automation initiatives</li>
+                            <li>Managed 3,000+ servers across AWS and Azure platforms, maintaining 99.9% SLA uptime</li>
+                            <li>Implemented automation strategies for site reliability, reducing operational costs and achieving 100% SLA in vulnerability compliance</li>
+                            <li>Acted as primary escalation point for critical operational incidents across 800+ Windows servers and 33,000 applications</li>
+                            <li>Managed service deployment processes through CI/CD pipelines ensuring seamless delivery and minimal downtime</li>
+                            <li>Handled pre-CAB and CAB for vulnerability management on AWS and Azure environments collaborating with SecOps for remediation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Journey Section -->
+    <section id="it-journey" class="visual-showcase" style="padding: 40px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>IT Journey</h2>
+                <div class="section-subtitle">A visual timeline of transformative technology leadership and growth</div>
+            </div>
+            
+            <div class="journey-image" style="margin-top: 40px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+                <!-- Full-width landscape image -->
+                <img src="assets/images/showcase/growth.png" 
+                     alt="IT Journey Growth Timeline" 
+                     style="width: 100%; height: auto; display: block; object-fit: contain; background-color: #f8fafc;">
+            </div>
+            
+           
+        </div>
+    </section>
+
+ <!-- Visual Showcase Section -->
+<section id="visual" class="visual-showcase">
+    <div class="container">
+        <div class="section-title">
+            <h2>Visual Showcase</h2>
+            <div class="section-subtitle" style="font-size: 16px; margin-top: 15px;">Quantifiable impact and core expertise in driving digital transformation</div>
+        </div>
+        
+        <div class="showcase-grid">
+            <div class="showcase-item" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="showcase-image">
+                    <img src="assets/images/showcase/quantifiable-impact.png" alt="Quantifiable Impact" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <h3>Quantifiable Impact</h3>
+                <p>Visual representation of measurable outcomes including ₹28Cr+ investment secured, 35% operational efficiency improvement, 40% cloud cost optimization, and 99.9% SLA achievement across global operations.</p>
+            </div>
+            
+            <div class="showcase-item" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="showcase-image">
+                    <img src="assets/images/showcase/core-expertise.png" alt="Core Expertise" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <h3>Core Expertise in Digital Transformation</h3>
+                <p>Comprehensive visualization of expertise spanning AI/ML implementation, cloud migrations, ERP rollouts, cybersecurity frameworks, and operational excellence across government and Fortune 500 enterprises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section - 50% SMALLER -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <div class="section-title">
+            <h2>Professional Certifications</h2>
+            <div class="section-subtitle">Industry-recognized credentials validating strategic technology leadership capabilities</div>
+        </div>
+        
+        <div class="cert-grid">
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                    <img src="assets/images/certifications/pmp-certificate.jpg" alt="PMP Certification" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>Project Management Professional (PMP)®</h3>
+                    <p>Project Management Institute | Global Gold Standard</p>
+                    <span class="cert-badge">Strategic Portfolio Leadership</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                    <img src="assets/images/certifications/prince2-certificate.jpg" alt="PRINCE2 Certification" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>PRINCE2® Foundation &amp; Practitioner</h3>
+                    <p>AXELOS | Structured Project Governance</p>
+                    <span class="cert-badge">Project Management Excellence</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                    <img src="assets/images/certifications/aws-solutions-architect.jpg" alt="AWS Solutions Architect" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>AWS Certified Solutions Architect - Associate</h3>
+                    <p>Amazon Web Services | Cloud Architecture</p>
+                    <span class="cert-badge">Cloud Architecture Excellence</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                    <img src="assets/images/certifications/aws-sysops.jpg" alt="AWS SysOps" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>AWS Certified SysOps Administrator - Associate</h3>
+                    <p>Amazon Web Services | Cloud Operations</p>
+                    <span class="cert-badge">Operational Excellence</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                     <img src="assets/images/certifications/psm2-certificate.jpg" alt="Scrum Master Certification" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>Professional Scrum Master™ II (PSM II)</h3>
+                    <p>Scrum.org | Advanced Agile Leadership</p>
+                    <span class="cert-badge">Agile Transformation</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" style="opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="cert-img">
+                    <img src="assets/images/certifications/csm-certificate.jpg" alt="CSM Certification" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="cert-info">
+                    <h3>Certified Scrum Master® (CSM®)</h3>
+                    <p>Scrum Alliance | Agile Framework Mastery</p>
+                    <span class="cert-badge">Team Leadership</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Global Leadership Section -->
+<section id="global" class="global">
+    <div class="container">
+        <div class="section-title">
+            <h2>Global Leadership Presence</h2>
+            <div class="section-subtitle">Successfully managing technology operations and teams across multiple continents</div>
+        </div>
+        
+        <div class="global-map">
+            <div class="map-overlay">
+                <div class="map-content">
+                    <h3>Multinational Technology Leadership</h3>
+                    <p>Successfully navigated complex stakeholder ecosystems across diverse geographical markets, implementing scalable solutions that transcend cultural and operational boundaries.</p>
+                    
+                    <div class="map-flags">
+                        <div class="flag">
+                            <div class="flag-icon">🇮🇳</div>
+                            <span>India (Chennai &amp; Pan India)</span>
+                        </div>
+                        <div class="flag">
+                            <div class="flag-icon">🇪🇸</div>
+                            <span>Spain/EU</span>
+                        </div>
+                        <div class="flag">
+                            <div class="flag-icon">🇬🇧</div>
+                            <span>United Kingdom</span>
+                        </div>
+                        <div class="flag">
+                            <div class="flag-icon">🇺🇸</div>
+                            <span>United States</span>
+                        </div>
+                        <div class="flag">
+                            <div class="flag-icon">🌏</div>
+                            <span>APAC Region</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Gallery -->
+<section class="visual-showcase">
+    <div class="container">
+        <div class="social-gallery">
+            <div class="section-title" style="margin-bottom: 10px;">
+                <h2>Social Media Presence</h2>
+                <div class="section-subtitle">Professional insights and industry perspectives</div>
+            </div>
+            
+            <!-- Two full-size landscape photos -->
+            <div style="margin: 20px 0;"> <!-- Reduced margin from 40px to 20px -->
+                <div style="margin-bottom: 20px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="assets/images/social/social-6.jpg" 
+                         alt="Professional Insight Landscape 1" 
+                         style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 10px;"> <!-- Added margin-bottom -->
+                    <img src="assets/images/social/social-7.jpg" 
+                         alt="Professional Insight Landscape 2" 
+                         style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section - Moved right below Social Media -->
+<section id="contact" class="contact" style="padding-top: 30px;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <div class="section-subtitle">Available for consulting opportunities and leadership roles globally</div>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-info" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Column 1: Email & Phone -->
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>coolsen2010@yahoo.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" style="margin-top: 30px;">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p style="white-space: nowrap;">+34 673 529 776 (Barcelona)</p>
+                            <p style="white-space: nowrap;">+91 98848 33857 (India)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Location & LinkedIn -->
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Barcelona, Catalonia, Spain</p>
+                            <p>India (Chennai &amp; Pan India)</p>
+                            <p style="white-space: nowrap;">Authorized to work across EU | 100% relocation flexibility within Spain</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" style="margin-top: 30px;">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p style="white-space: nowrap;">
+                                <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610" target="_blank" style="color: var(--accent); text-decoration: none;">
+                                    linkedin.com/in/senthil-varadarajan-82063610
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Links Centered Below -->
+            <div style="text-align: center; margin-top: 50px;">
+                <div class="social-links" style="justify-content: center;">
+                    <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:coolsen2010@yahoo.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+34673529776" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <a href="#" class="logo" style="color: white; margin-bottom: 30px;">SENTHIL<span style="color: var(--gold);">VARADARAJAN</span></a>
+            <p style="max-width: 700px; margin-bottom: 40px; opacity: 0.8; font-size: 18px;">Visionary technology executive specializing in sovereign AI infrastructure, digital transformation at scale, and strategic IT governance for global enterprises and government entities.</p>
+            
+            <div class="copyright">
+                <p>© 2024 Senthil Varadarajan. All rights reserved. | LinkedIn: <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610" target="_blank" style="color: var(--gold); text-decoration: none;">linkedin.com/in/senthil-varadarajan-82063610</a></p>
+                <p id="timestamp"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+
+    <script>
+        // Executive Navigation
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.innerHTML = document.querySelector('.nav-links').classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.mobile-toggle').innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+       
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe impact cards and timeline items
+        document.querySelectorAll('.impact-card, .timeline-content, .cert-card, .stat-item, .showcase-item, .social-photo').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 10px 30px rgba(15, 44, 89, 0.15)';
+            } else {
+                header.style.padding = '25px 0';
+                header.style.boxShadow = '0 15px 40px rgba(15, 44, 89, 0.12)';
+            }
+        });
+
+        // Add timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const timestampElement = document.getElementById('timestamp');
+            if (timestampElement) {
+                const now = new Date();
+                timestampElement.textContent = 'Last updated: ' + now.toLocaleString();
+            }
+        });
+    </script>
+
+</body></html>
