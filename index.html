@@ -89,6 +89,40 @@
             left: 0;
         }
 
+        .brand-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-linkedin {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a66c2;
+            font-size: 32px;
+            line-height: 1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .header-linkedin:hover {
+            color: #004182;
+            transform: scale(1.15) translateY(-2px);
+        }
+
+        .nav-linkedin-link {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            color: #0a66c2 !important;
+            font-weight: 700 !important;
+        }
+
+        .nav-linkedin-link:hover {
+            color: #004182 !important;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -285,6 +319,21 @@
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
             border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-linkedin {
+            background-color: #0a66c2;
+            color: var(--white);
+            border: 2px solid #0a66c2;
+            box-shadow: 0 10px 25px rgba(10, 102, 194, 0.3);
+        }
+
+        .btn-linkedin:hover {
+            background-color: #004182;
+            border-color: #004182;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(10, 102, 194, 0.45);
+            color: var(--white);
         }
 
         /* Section Styling */
@@ -1014,6 +1063,19 @@
                 align-items: flex-start;
             }
 
+            .brand-group {
+                gap: 10px;
+                max-width: calc(100% - 60px);
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .header-linkedin {
+                font-size: 26px;
+            }
+
             .nav-links {
                 flex-direction: column;
                 width: 100%;
@@ -1079,7 +1141,12 @@
     <header style="padding: 25px 0px; box-shadow: rgba(15, 44, 89, 0.12) 0px 15px 40px;">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">SENTHIL<span>VARADARAJAN</span></a>
+                <div class="brand-group">
+                    <a href="#" class="logo">SENTHIL<span>VARADARAJAN</span></a>
+                    <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610/" target="_blank" rel="noopener noreferrer" class="header-linkedin" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
                 <button class="mobile-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -1089,11 +1156,15 @@
                     <li><a href="#experience">Leadership Journey</a></li>
                     <li><a href="#tech-stack">Tech Stack</a></li>
                     <li><a href="#it-journey">IT Journey</a></li>
-                    <li><a href="#tech-stack">Tech Stack</a></li>
                     <li><a href="#visual">Visual Showcase</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#global">Global Presence</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610/" target="_blank" rel="noopener noreferrer" class="nav-linkedin-link" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -1115,6 +1186,7 @@
                             Experience</a>
                         <a href="assets/images/showcase/cio_resume_en.docx" class="btn btn-secondary" download><i
                                 class="fas fa-download"></i> Download Resume</a>
+                        <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
                 <div class="profile-img">

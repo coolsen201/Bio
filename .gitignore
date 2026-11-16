@@ -3,3 +3,4 @@ version2.html
 *.tmp
 .vscode/
 Thumbs.db
+.vercel
