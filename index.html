@@ -336,6 +336,34 @@
             color: var(--white);
         }
 
+        .brand-logo-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 16px;
+            background: #ffffff;
+            border-radius: 50px;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            text-decoration: none;
+            height: 59px;
+        }
+
+        .brand-logo-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.35);
+            border-color: var(--gold);
+        }
+
+        .brand-logo-badge img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        }
+
         /* Section Styling */
         section {
             padding: 60px 0;
@@ -1184,9 +1212,10 @@
                         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
                         <a href="#experience" class="btn btn-secondary"><i class="fas fa-chart-line"></i> View
                             Experience</a>
-                        <a href="assets/images/showcase/cio_resume_en.docx" class="btn btn-secondary" download><i
-                                class="fas fa-download"></i> Download Resume</a>
                         <a href="https://www.linkedin.com/in/senthil-varadarajan-82063610/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://commonnext.in/" target="_blank" rel="noopener noreferrer" class="brand-logo-badge" title="CommonNext - Building Digital Tomorrow" aria-label="Visit CommonNext">
+                            <img src="assets/images/commonnext-logo.jpg" alt="CommonNext Logo">
+                        </a>
                     </div>
                 </div>
                 <div class="profile-img">
